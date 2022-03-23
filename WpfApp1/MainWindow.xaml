@@ -36,18 +36,19 @@
         <Button Content="Apply filter" HorizontalAlignment="Right" VerticalAlignment="Center" Width="75" Grid.Row="1"  Grid.Column="1" />
 
         <CheckBox Content="Parallel" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2"  Grid.Column="1" />
+        <ComboBox Grid.Column="1" HorizontalAlignment="Right"  Grid.Row="2" VerticalAlignment="Center" Width="120"/>
 
         <Button Content="Shades of gray" HorizontalAlignment="Center" VerticalAlignment="Center" Width="150" Grid.Row="3"  Grid.Column="1" />
-        
+
         <Button Content="Negative" HorizontalAlignment="center" VerticalAlignment="Center" Width="150" Grid.Row="4"  Grid.Column="1" />
 
-        <Button Content="Half" HorizontalAlignment="Left" VerticalAlignment="Center" Width="75" Grid.Row="5"  Grid.Column="1" />
+        <RadioButton Content="Half" HorizontalAlignment="Left" VerticalAlignment="Center" Width="75" Grid.Row="5"  Grid.Column="1" />
         <TextBlock Grid.Column="1" HorizontalAlignment="Right" Grid.Row="5" Text="Depth" TextWrapping="Wrap" Width="75" VerticalAlignment="Center"/>
 
-        <Button Content="Quarter" HorizontalAlignment="Left" VerticalAlignment="Center" Width="75" Grid.Row="6"  Grid.Column="1" />
+        <RadioButton Content="Quarter" HorizontalAlignment="Left" VerticalAlignment="Center" Width="75" Grid.Row="6"  Grid.Column="1" />
         <Button Content="Apply" HorizontalAlignment="Right" VerticalAlignment="Center" Width="75" Grid.Row="6"  Grid.Column="1" />
 
-        <Button Content="Eighth" HorizontalAlignment="Left" VerticalAlignment="Center" Width="75" Grid.Row="7"  Grid.Column="1" />
+        <RadioButton Content="Eighth" HorizontalAlignment="Left" VerticalAlignment="Center" Width="75" Grid.Row="7"  Grid.Column="1" />
 
         <Button Content="Mirror" HorizontalAlignment="center" VerticalAlignment="Center" Width="150" Grid.Row="8"  Grid.Column="1" />
 
