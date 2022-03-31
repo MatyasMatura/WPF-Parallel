@@ -19,6 +19,7 @@ namespace WpfApp1.ViewModels
         public RelayCommand UploadImage { get; set; }
         public RelayCommand UnloadImage { get; set; }
         public RelayCommand ShadesOfGray { get; set; }
+        public RelayCommand ColorReduction { get; set; }
 
         public MainViewModel()
         {
@@ -60,6 +61,23 @@ namespace WpfApp1.ViewModels
                             int b = pixels[x, y] & 0xFF;
                             int prumer = (r + g + b) / 3;
                             pixels[x, y] = a + (prumer << 16) + (prumer << 8) + prumer;
+                        }
+                    }
+                    WriteableBitmap wbm = Array2DBMIConverter.Array2DToWriteableBitmap(pixels, ImgPhoto);
+                    ImgPhoto = Array2DBMIConverter.ConvertWriteableBitmapToBitmapImage(wbm);
+                },
+                () => true
+                );
+            ColorReduction = new RelayCommand(
+                () =>
+                {
+                    pixels = Array2DBMIConverter.BitmapImageToArray2D(ImgPhoto);
+                    for (int x = 0; x < pixels.GetLength(0); ++x)
+                    {
+                        for (int y = 0; y < pixels.GetLength(1); ++y)
+                        {
+                            int color = pixels[x, y];
+                            pixels[x, y] = (int)(color & 0xFFC0C0C0);
                         }
                     }
                     WriteableBitmap wbm = Array2DBMIConverter.Array2DToWriteableBitmap(pixels, ImgPhoto);

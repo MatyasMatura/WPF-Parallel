@@ -18,8 +18,8 @@
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
             <RowDefinition Height="40" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20" />
@@ -32,7 +32,7 @@
         <Button Height="23" HorizontalAlignment="Left" Name="btnLoad" VerticalAlignment="Center" Width="75" Grid.Row="0" Grid.Column="1" Command="{Binding UploadImage}">_Load</Button>
         <Button Content="Unload" HorizontalAlignment="Right" VerticalAlignment="Center" Width="75" Grid.Row="0"  Grid.Column="1" Command="{Binding UnloadImage}" />
 
-        <Button Content="Unload" HorizontalAlignment="Left" VerticalAlignment="Center" Width="75" Grid.Row="1"  Grid.Column="1" />
+        <Button Content="Reduction" HorizontalAlignment="Left" VerticalAlignment="Center" Width="75" Grid.Row="1"  Grid.Column="1" Command="{Binding ColorReduction}" />
         <Button Content="Apply filter" HorizontalAlignment="Right" VerticalAlignment="Center" Width="75" Grid.Row="1"  Grid.Column="1" />
 
         <CheckBox Content="Parallel" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Row="2"  Grid.Column="1" />
